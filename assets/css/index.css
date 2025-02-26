@@ -60,6 +60,7 @@ a:hover {
     background: linear-gradient(to right, #6b1aaa, #25a05a);
 }
 .details {
+    color: white;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
