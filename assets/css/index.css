@@ -15,7 +15,7 @@ body {
     animation: fadeIn 1s ease-in;
 }
 h1, h2 {
-    background: linear-gradient(to right, #a134f5, #40f5a7);
+    background: linear-gradient(to right, #9f22ff, #4049f5);
     background-clip: text;
     color: transparent;
     text-align: center;
@@ -48,7 +48,7 @@ a:hover {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    background: linear-gradient(to right, #a134f5, #40f5a7);
+    background: linear-gradient(to right, #9f22ff, #4049f5);
     color: white;
     border: none;
     border-radius: 5px;
@@ -57,7 +57,7 @@ a:hover {
     transition: background 0.3s ease-in-out; /* Ajout d'un effet d'accélération/décélération */
 }
 .button:hover {
-    background: linear-gradient(to right, #6b1aaa, #25a05a);
+    background: linear-gradient(to right,  #61149c, #1a219c);
 }
 .details {
     color: white;
