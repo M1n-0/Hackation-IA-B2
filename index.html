@@ -1,11 +1,133 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <title>index</title>
+    <title>Consommation Énergétique des IA Génératives</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in;
+        }
+        h1, h2 {
+            color: #0275d8;
+            text-align: center;
+        }
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .card {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            width: 32%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #0275d8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #025aa5;
+        }
+        .details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-in-out;
+        }
+        .details.visible {
+            max-height: 300px;
+            opacity: 1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        function toggleDetails(sectionId) {
+            var element = document.getElementById(sectionId);
+            element.classList.toggle('visible');
+        }
+    </script>
 </head>
 <body>
-    <h1 class="hello">Hello :D</h1>
+    <div class="container">
+        <h1>Consommation Énergétique des IA Génératives</h1>
+        <p style="text-align: center;">Les modèles d'IA générative consomment des quantités importantes d'énergie. Cliquez pour en savoir plus.</p>
+        
+        <div class="content-section">
+            <div class="card">
+                <h2>Génération de Texte</h2>
+                <button class="button" onclick="toggleDetails('texteDetails')">Voir plus</button>
+                <div id="texteDetails" class="details">
+                    <p><strong>GPT-3 :</strong> Entraînement ≈ 1 287 MWh, émissions de 552 tonnes CO₂.</p>
+                    <p><strong>GPT-4 :</strong> Consommation non publiée, mais supérieure à GPT-3.</p>
+                    <p><strong>Chaque requête GPT-4 :</strong> ≈ 0,3 Wh.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Génération d'Images</h2>
+                <button class="button" onclick="toggleDetails('imageDetails')">Voir plus</button>
+                <div id="imageDetails" class="details">
+                    <p>Création d’une image HD consomme autant que la recharge d’un smartphone.</p>
+                    <p>Consommation par image : entre 1,35 kWh et 11,49 kWh.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Génération de Vidéos</h2>
+                <button class="button" onclick="toggleDetails('videoDetails')">Voir plus</button>
+                <div id="videoDetails" class="details">
+                    <p>Les modèles vidéo sont parmi les plus gourmands en énergie.</p>
+                    <p>Peu de données précises, mais impact significatif.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Sources</h2>
+        <div class="card" style="width: 100%;">
+            <ul>
+                <li><a href="https://www.economie.gouv.qc.ca/objectifs/informer/vecteurs/vecteurs-economie-et-innovation-detail/creer-une-image-avec-lia-generative-consomme-autant-denergie-que-charger-son-telephone">Ministère de l'Économie du Québec</a></li>
+                <li><a href="https://www.bfmtv.com/tech/intelligence-artificielle/les-gens-ne-s-en-doutent-pas-chat-gpt-est-il-une-bombe-environnementale">BFMTV</a></li>
+                <li><a href="https://arxiv.org/abs/2407.14892">Étude sur l'empreinte carbone des IA</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
