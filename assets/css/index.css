@@ -81,3 +81,16 @@ a:hover {
 .text-intro{
     color: whitesmoke;
 }
+
+.sourceText{
+    color: #54afff;
+}
+
+.Disclamer{
+    color:white;
+}
+
+.underDisclamer{
+    color: white;
+    font-size: 10px;
+}
