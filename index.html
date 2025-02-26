@@ -9,20 +9,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #353535;
             color: #333;
         }
         .container {
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            background: white;
+            background: rgb(56, 56, 56);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             animation: fadeIn 1s ease-in;
         }
         h1, h2 {
-            color: #0275d8;
+            background: linear-gradient(to right, #a134f5, #40f5a7);
+            background-clip: text;
+            color: transparent;
             text-align: center;
         }
         .content-section {
@@ -31,19 +33,18 @@
             gap: 10px;
         }
         .card {
-            background: #e9ecef;
+            background: #636363;
             padding: 15px;
             border-radius: 5px;
             width: 32%;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
             transition: transform 0.3s ease-in-out;
         }
         .card:hover {
             transform: scale(1.05);
         }
         a {
-            color: #0275d8;
+            color: #54afff;
             text-decoration: none;
         }
         a:hover {
@@ -54,16 +55,16 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            background-color: #0275d8;
+            background: linear-gradient(to right, #a134f5, #40f5a7);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-align: center;
-            transition: background-color 0.3s;
+            transition: background 0.3s ease-in-out; /* Ajout d'un effet d'accélération/décélération */
         }
         .button:hover {
-            background-color: #025aa5;
+            background: linear-gradient(to right, #6b1aaa, #25a05a);
         }
         .details {
             max-height: 0;
@@ -79,6 +80,13 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .text-intro{
+            color: whitesmoke;
+        }
     </style>
     <script>
         function toggleDetails(sectionId) {
@@ -89,12 +97,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Consommation Énergétique des IA Génératives</h1>
-        <p style="text-align: center;">Les modèles d'IA générative consomment des quantités importantes d'énergie. Cliquez pour en savoir plus.</p>
-        
+        <h1>Consommation Énergétique des IA Génératives 🏭</h1>
+        <p class="text-intro" style="text-align: center;">Les modèles d'IA générative consomment des quantités importantes d'énergie. Cliquez pour en savoir plus.</p>
         <div class="content-section">
             <div class="card">
-                <h2>Génération de Texte</h2>
+                <h2>IA générative de Texte</h2>
                 <button class="button" onclick="toggleDetails('texteDetails')">Voir plus</button>
                 <div id="texteDetails" class="details">
                     <p><strong>GPT-3 :</strong> Entraînement ≈ 1 287 MWh, émissions de 552 tonnes CO₂.</p>
@@ -106,7 +113,7 @@
                 <h2>Génération d'Images</h2>
                 <button class="button" onclick="toggleDetails('imageDetails')">Voir plus</button>
                 <div id="imageDetails" class="details">
-                    <p>Création d’une image HD consomme autant que la recharge d’un smartphone.</p>
+                    <p>Création d’une image HD consomme autant que la recharge d’un smartphone, si généré par une IA générative (pas adaptée)</p>
                     <p>Consommation par image : entre 1,35 kWh et 11,49 kWh.</p>
                 </div>
             </div>
@@ -120,6 +127,11 @@
             </div>
         </div>
         
+        <div class="video-container">
+            <h2>Vidéo sur le sujet :</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l_keGVGbMfA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
         <h2>Sources</h2>
         <div class="card" style="width: 100%;">
             <ul>
@@ -131,4 +143,3 @@
     </div>
 </body>
 </html>
-        
